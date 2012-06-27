@@ -7,8 +7,6 @@ Framework desarrollado
 Instalacion
 -----------
 
-Para ver la ayuda e instrucciones de como instalar el Framework, date una vuelta por [el manual de la wiki][install]: 
+Para ver la ayuda e instrucciones de como instalar el Framework, date una vuelta por nuestra guia de instalacion: 
 
-
-
-[install]: https://github.com/Mitocondria/carbono/wiki/Instalaci%C3%B3[1]: http://github.com/github/markup/issues
+https://github.com/Mitocondria/carbono/wiki/Instalacion
