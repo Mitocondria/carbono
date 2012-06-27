@@ -1,14 +1,35 @@
 <?php
+require_once SYSTEM_PATH.'/Exception.php';
+
 class Carbono_Config
 {
-    protected $_data;
+    /**
+     * Datos del archivo de configuracion
+     * 
+     * @var array
+     */
+    protected $_data = array();
     
+    /**
+     * Constructor
+     * 
+     * Asignamos los datos entregados a la variable $_data
+     * 
+     * @param unknown_type $arrayData
+     */
     public function __construct($arrayData)
     {
-        $this->_data = array();
+        if (!isset($arrayData) || $arrayData = null) {
+            throw new Carbono_Exception('No hay datos de configuracion');
+        }
         $this->_data = $arrayData;
     }
     
+    /**
+     * Convertimos la variable $_data a un array.
+     * 
+     * @return multitype:array Carbono_Config
+     */
     public function toArray()
     {
         $array = array();
@@ -23,6 +44,13 @@ class Carbono_Config
         return $array;
     }
     
+    /**
+     * Retornamos el valor de una variable asignado en el archivo de 
+     * configuracion
+     * 
+     * @param string $value
+     * @return string
+     */
     public function __get($value)
     {
         $dataArray = $this->toArray();
